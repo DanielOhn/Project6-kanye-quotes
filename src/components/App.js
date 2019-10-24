@@ -25,8 +25,7 @@ function App() {
           </div>
         </div>
         <div className="content">
-          {quote && <p>{quote}</p>}
-          {!quote && <p>Quote Text Goes Here...</p>}
+          {quote ? (<p>{quote}</p>) : (<p>Quote Text Goes Here...</p>)}
         </div>
         <div className="footer">
           <Generate onClick={getQuote} />
